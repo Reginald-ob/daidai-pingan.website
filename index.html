@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日和日常 | 櫻色選物 - Minimalist Japanese Lifestyle Select Shop</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Sans TC & Playfair Display for elegant headings -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for beautiful icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pinkAccent: '#ffb3c1',
+                        pinkLight: '#fff0f3',
+                        pinkMedium: '#ffccd5',
+                        pinkDark: '#fb6f92',
+                        charcoal: '#4a4a4a',
+                        softGray: '#f8f9fa'
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Noto Sans TC", sans-serif;
+            background-color: #fdfbfb;
+            color: #4a4a4a;
+        }
+        /* 美化滾動條 */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fff0f3;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ffb3c1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #fb6f92;
+        }
+        /* 隱藏預設滾動條但保持滑動 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="selection:bg-pinkMedium selection:text-white">
+
+    <!-- Top banner / Announcement -->
+    <div class="bg-[#ffb3c1] text-white text-xs text-center py-2 tracking-widest font-light">
+        ❀ 滿額免運活動實施中｜日本空運直送，溫暖你的質樸日常 ❀
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#ffb3c1]/20 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo area -->
+            <a href="#" class="flex items-center space-x-3 group focus:outline-none">
+                <div class="w-10 h-10 rounded-full bg-[#ffb3c1] flex items-center justify-center shadow-md transform group-hover:rotate-12 transition-transform duration-500">
+                    <!-- Elegant Cherry Blossom SVG icon -->
+                    <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12,2C11.5,2 11,3 10.5,4.5C9.5,4.1 8.5,4 7.5,4C5.5,4 4,5.5 4,7.5C4,8.5 4.1,9.5 4.5,10.5C3,11 2,11.5 2,12C2,12.5 3,13 4.5,13.5C4.1,14.5 4,15.5 4,16.5C4,18.5 5.5,20 7.5,20C8.5,20 9.5,19.9 10.5,19.5C11,21 11.5,22 12,22C12.5,22 13,21 13.5,19.5C14.5,19.9 15.5,20 16.5,20C18.5,20 20,18.5 20,16.5C20,15.5 19.9,14.5 19.5,13.5C21,13 22,12.5 22,12C22,12.5 21,11 19.5,10.5C19.9,9.5 20,8.5 20,7.5C20,5.5 18.5,4 16.5,4C15.5,4 14.5,4.1 13.5,4.5C13,3 12.5,2 12,2Z"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold tracking-widest text-charcoal group-hover:text-pinkDark transition-colors">日和日常</span>
+                    <span class="text-[9px] text-[#ffb3c1] tracking-widest -mt-1 font-serif font-light">HIYORI SELECTION</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links (Desktop) -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-widest">
+                <a href="#featured-section" class="text-charcoal hover:text-pinkDark transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-pinkAccent hover:after:w-full after:transition-all">限定特選</a>
+                <a href="#shop-section" class="text-charcoal hover:text-pinkDark transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-pinkAccent hover:after:w-full after:transition-all">日常良品</a>
+                <a href="#about-section" class="text-charcoal hover:text-pinkDark transition-colors py-2 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-pinkAccent hover:after:w-full after:transition-all">關於日和</a>
+            </nav>
+
+            <!-- Social Media & Actions -->
+            <div class="flex items-center space-x-4">
+                <a href="https://instagram.com" target="_blank" class="text-gray-400 hover:text-pinkDark transition-colors p-2" aria-label="Instagram">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#shop-section" class="bg-[#ffb3c1] text-white hover:bg-pinkDark transition-all duration-300 text-xs px-5 py-2.5 rounded-full tracking-wider font-medium shadow-sm hover:shadow-md hidden sm:inline-block">
+                    立即選購 <i class="fas fa-chevron-right text-[10px] ml-1"></i>
+                </a>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-charcoal hover:text-pinkDark p-2 focus:outline-none" aria-label="Toggle Menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-[#ffb3c1]/20 px-6 py-4 space-y-3 transition-all duration-300">
+            <a href="#featured-section" class="block text-charcoal hover:text-pinkDark py-2 text-sm tracking-widest font-medium">✨ 限定特選 (新推/預購/上市)</a>
+            <a href="#shop-section" class="block text-charcoal hover:text-pinkDark py-2 text-sm tracking-widest font-medium">📦 日常良品 (所有商品)</a>
+            <a href="#about-section" class="block text-charcoal hover:text-pinkDark py-2 text-sm tracking-widest font-medium">🌸 關於日和</a>
+            <div class="pt-2 border-t border-gray-100">
+                <a href="#shop-section" class="block w-full text-center bg-[#ffb3c1] text-white py-2.5 rounded-xl text-sm font-medium tracking-wider">
+                    開始探索選物
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="relative bg-gradient-to-b from-[#fff0f3] to-white overflow-hidden py-16 sm:py-24">
+        <!-- Background Decorative Circles -->
+        <div class="absolute -top-12 -left-12 w-64 h-64 rounded-full bg-[#ffb3c1]/10 blur-3xl"></div>
+        <div class="absolute bottom-12 right-12 w-80 h-80 rounded-full bg-[#ffccd5]/15 blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-white px-3.5 py-1.5 rounded-full border border-pinkAccent/30 shadow-sm">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pinkDark opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-pinkDark"></span>
+                        </span>
+                        <span class="text-xs text-pinkDark tracking-widest font-medium">日系優雅 ‧ 極簡美學</span>
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-charcoal tracking-widest leading-relaxed">
+                        溫暖生活中的<br class="hidden sm:inline" />
+                        每一刻<span class="text-pinkDark font-serif italic">日常光景</span>
+                    </h1>
+                    
+                    <p class="text-gray-500 text-sm sm:text-base leading-loose max-w-xl mx-auto lg:mx-0 font-light">
+                        「日和日常」為您精選兼具實用性與美感溫度的生活道具。
+                        摒棄繁瑣，回歸簡單純粹。精緻包裝、產地直送，支持超商賣貨便安全結帳，安心將幸福感遞送到您手中。
+                    </p>
+                    
+                    <!-- Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#shop-section" class="w-full sm:w-auto text-center bg-[#ffb3c1] text-white hover:bg-pinkDark transition-all duration-300 font-medium tracking-widest text-sm px-8 py-4 rounded-xl shadow-lg shadow-pinkAccent/20 hover:shadow-pinkDark/20 transform hover:-translate-y-0.5">
+                            瀏覽所有品項
+                        </a>
+                        <a href="#featured-section" class="w-full sm:w-auto text-center bg-white text-pinkDark border border-[#ffb3c1] hover:bg-pinkLight transition-all duration-300 font-medium tracking-widest text-sm px-8 py-4 rounded-xl">
+                            限定品特別展
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Hero Image Display -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-[340px] sm:max-w-[400px]">
+                        <!-- Decorative Frame -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-[#ffccd5] to-transparent rounded-3xl transform rotate-3 scale-105 opacity-60"></div>
+                        <!-- Main Image Container -->
+                        <div class="relative bg-white p-4 rounded-3xl shadow-xl border border-pinkLight transform -rotate-2 transition-transform hover:rotate-0 duration-500">
+                            <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=1000" 
+                                 alt="Japanese Minimalist Interior Decor" 
+                                 class="w-full h-[320px] object-cover rounded-2xl"
+                                 onerror="this.src='https://placehold.co/600x480/ffe5ec/fb6f92?text=Hiyori+Daily+Life'">
+                            
+                            <!-- Floating Tag -->
+                            <div class="absolute -bottom-4 -left-4 bg-white p-3 rounded-2xl shadow-lg border border-pinkLight flex items-center space-x-3">
+                                <span class="w-8 h-8 rounded-full bg-pinkLight text-pinkDark flex items-center justify-center text-xs font-bold">🌸</span>
+                                <div>
+                                    <p class="text-[10px] text-gray-400 font-light">今日極簡推薦</p>
+                                    <p class="text-xs font-semibold text-charcoal">天然香氛室內噴霧</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Carousel / Grid Section -->
+    <section id="featured-section" class="py-16 bg-white border-t border-b border-pinkLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center space-y-2 mb-12">
+                <span class="text-xs text-pinkDark font-semibold tracking-widest">LIMITED EDITIONS</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-charcoal tracking-widest">精選三大展區</h2>
+                <div class="h-[2px] w-12 bg-pinkAccent mx-auto mt-2"></div>
+                <p class="text-xs sm:text-sm text-gray-400 font-light tracking-wide mt-1">「新上架、特別預購與驚喜預告」每日生活的美好儀式感</p>
+            </div>
+
+            <!-- Tab Buttons to quickly filter types inside Featured Section -->
+            <div class="flex justify-center space-x-2 sm:space-x-4 mb-10 overflow-x-auto no-scrollbar pb-2">
+                <button onclick="filterFeatured('all')" id="feat-btn-all" class="feat-tab-btn active bg-pinkLight text-pinkDark px-5 py-2 rounded-full text-xs sm:text-sm tracking-wider font-medium transition-all duration-300 whitespace-nowrap border border-pinkAccent/20">
+                    全部精選
+                </button>
+                <button onclick="filterFeatured('new')" id="feat-btn-new" class="feat-tab-btn bg-white text-gray-400 hover:text-pinkDark px-5 py-2 rounded-full text-xs sm:text-sm tracking-wider font-medium transition-all duration-300 whitespace-nowrap border border-gray-100">
+                    ✨ 新推出 (New)
+                </button>
+                <button onclick="filterFeatured('pre')" id="feat-btn-pre" class="feat-tab-btn bg-white text-gray-400 hover:text-pinkDark px-5 py-2 rounded-full text-xs sm:text-sm tracking-wider font-medium transition-all duration-300 whitespace-nowrap border border-gray-100">
+                    ⏳ 預購商品 (Pre-order)
+                </button>
+                <button onclick="filterFeatured('soon')" id="feat-btn-soon" class="feat-tab-btn bg-white text-gray-400 hover:text-pinkDark px-5 py-2 rounded-full text-xs sm:text-sm tracking-wider font-medium transition-all duration-300 whitespace-nowrap border border-gray-100">
+                    📅 即將上市 (Coming Soon)
+                </button>
+            </div>
+
+            <!-- Featured Grid Container -->
+            <div id="featured-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 (New) -->
+                <div class="featured-card bg-white rounded-2xl border border-pinkLight shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden transform hover:-translate-y-1" data-feat-type="new">
+                    <div class="relative overflow-hidden group">
+                        <span class="absolute top-4 left-4 z-10 bg-pinkDark text-white text-[10px] tracking-widest font-semibold px-3 py-1 rounded-full uppercase">
+                            新着 ‧ NEW
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=800" 
+                             alt="櫻花香氛蠟燭" 
+                             class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+                             onerror="this.src='https://placehold.co/600x450/ffe5ec/fb6f92?text=New+Arrival'">
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="space-y-1">
+                            <span class="text-[10px] text-pinkDark tracking-widest block">#家居裝飾</span>
+                            <h3 class="text-lg font-bold text-charcoal tracking-wide">櫻花香氛手工植物大豆蠟燭</h3>
+                            <p class="text-xs text-gray-400 line-clamp-2">採用日本奈良八重櫻萃取，融合大豆蠟與木質燭芯，點燃時有溫暖的劈啪聲，帶來寧靜的治癒氛圍。</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-pinkLight">
+                            <div class="flex flex-col">
+                                <span class="text-[10px] text-gray-400 line-through">NT$ 650</span>
+                                <span class="text-lg font-bold text-pinkDark font-serif">NT$ 480</span>
+                            </div>
+                            <!-- Direct 7-11 Checkout Button -->
+                            <a href="https://myship.7-11.com.tw/general/detail/V2405000000001" target="_blank" class="bg-[#ffb3c1] hover:bg-pinkDark text-white font-medium text-xs px-5 py-3 rounded-xl tracking-wider transition-all duration-300 shadow-sm hover:shadow-md flex items-center space-x-1">
+                                <span>立即購買</span>
+                                <i class="fas fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 (Pre-order) -->
+                <div class="featured-card bg-white rounded-2xl border border-pinkLight shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden transform hover:-translate-y-1" data-feat-type="pre">
+                    <div class="relative overflow-hidden group">
+                        <span class="absolute top-4 left-4 z-10 bg-[#ffb3c1] text-white text-[10px] tracking-widest font-semibold px-3 py-1 rounded-full uppercase">
+                            予約 ‧ PRE
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800" 
+                             alt="極簡陶瓷手沖咖啡壺" 
+                             class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+                             onerror="this.src='https://placehold.co/600x450/ffe5ec/fb6f92?text=Pre+Order'">
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="space-y-1">
+                            <span class="text-[10px] text-pinkDark tracking-widest block">#廚房餐具</span>
+                            <h3 class="text-lg font-bold text-charcoal tracking-wide">極簡霧粉陶瓷手沖咖啡濾壺組</h3>
+                            <p class="text-xs text-gray-400 line-clamp-2">波佐見燒傳統工藝，特調櫻粉色釉料。螺紋內部導流設計，讓每一滴手沖咖啡都散發完美風味。</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-pinkLight">
+                            <div class="flex flex-col">
+                                <span class="text-[10px] text-gray-400 line-through">NT$ 1,200</span>
+                                <span class="text-lg font-bold text-pinkDark font-serif">NT$ 880</span>
+                            </div>
+                            <a href="https://myship.7-11.com.tw/general/detail/V2405000000002" target="_blank" class="bg-[#ffb3c1] hover:bg-pinkDark text-white font-medium text-xs px-5 py-3 rounded-xl tracking-wider transition-all duration-300 shadow-sm hover:shadow-md flex items-center space-x-1">
+                                <span>預購登記</span>
+                                <i class="fas fa-arrow-up-right-from-square text-[10px] ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 (Soon) -->
+                <div class="featured-card bg-white rounded-2xl border border-pinkLight shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden transform hover:-translate-y-1" data-feat-type="soon">
+                    <div class="relative overflow-hidden group">
+                        <span class="absolute top-4 left-4 z-10 bg-charcoal text-white text-[10px] tracking-widest font-semibold px-3 py-1 rounded-full uppercase">
+                            近日公開 ‧ SOON
+                        </span>
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800" 
+                             alt="和風刺繡抱枕" 
+                             class="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700 filter grayscale-[20%]"
+                             onerror="this.src='https://placehold.co/600x450/ffe5ec/fb6f92?text=Coming+Soon'">
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <div class="space-y-1">
+                            <span class="text-[10px] text-pinkDark tracking-widest block">#家居裝飾</span>
+                            <h3 class="text-lg font-bold text-charcoal tracking-wide">和風手作刺繡純棉抱枕套</h3>
+                            <p class="text-xs text-gray-400 line-clamp-2">日本職人純手工刺繡工藝，自然麻棉觸感，立體精緻花卉紋理。為您的客廳沙發注入一絲京都秋意。</p>
+                        </div>
+                        <div class="flex items-center justify-between pt-2 border-t border-pinkLight">
+                            <div class="flex flex-col">
+                                <span class="text-[10px] text-gray-400 font-light">定價預估</span>
+                                <span class="text-lg font-bold text-gray-500 font-serif">NT$ 550</span>
+                            </div>
+                            <button disabled class="bg-gray-200 text-gray-400 font-medium text-xs px-5 py-3 rounded-xl tracking-wider cursor-not-allowed">
+                                敬請期待
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Main Dynamic Shopping Showcase Section -->
+    <section id="shop-section" class="py-16 bg-[#fffbfb] scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Dynamic Controls Frame -->
+            <div class="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-pinkLight mb-12 space-y-6">
+                
+                <!-- Title inside controls -->
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div>
+                        <h2 class="text-xl sm:text-2xl font-bold text-charcoal tracking-widest flex items-center gap-2">
+                            <span>探索日常良品</span>
+                            <span class="text-xs bg-pinkLight text-pinkDark px-2.5 py-1 rounded-full font-light">全店優選</span>
+                        </h2>
+                        <p class="text-xs text-gray-400 font-light mt-1">細緻分類，輕鬆找到點綴日常的實用好物</p>
+                    </div>
+                    
+                    <!-- Quick Stats Display -->
+                    <div class="text-xs text-gray-400 tracking-wider">
+                        共顯示 <span id="filtered-count" class="text-pinkDark font-semibold">12</span> 款精選商品
+                    </div>
+                </div>
+
+                <!-- Search and Filters Panel -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-4 border-t border-pinkLight/50">
+                    
+                    <!-- Search Input (Span 5) -->
+                    <div class="lg:col-span-5 relative">
+                        <label class="block text-xs font-semibold text-gray-400 tracking-wider mb-2 uppercase">關鍵字搜尋 ‧ SEARCH</label>
+                        <div class="relative">
+                            <input type="text" id="search-input" onkeyup="filterProducts()" placeholder="搜尋產品名稱或關鍵字..." 
+                                   class="w-full bg-[#fdfbfb] border border-[#ffb3c1]/30 hover:border-[#ffb3c1] focus:border-pinkDark focus:outline-none rounded-xl py-3 pl-10 pr-4 text-sm text-charcoal tracking-wide placeholder-gray-300 transition-all shadow-inner">
+                            <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+                                <i class="fas fa-search text-[#ffb3c1]"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category Selection (Span 4) -->
+                    <div class="lg:col-span-4">
+                        <label class="block text-xs font-semibold text-gray-400 tracking-wider mb-2 uppercase">商品類別 ‧ CATEGORIES</label>
+                        <select id="category-select" onchange="filterProducts()" 
+                                class="w-full bg-[#fdfbfb] border border-[#ffb3c1]/30 hover:border-[#ffb3c1] focus:border-pinkDark focus:outline-none rounded-xl py-3 px-4 text-sm text-charcoal tracking-wide transition-all shadow-inner">
+                            <option value="all">📁 全部類別 (All Goods)</option>
+                            <option value="decor">🏺 家居裝飾 (Home Decor)</option>
+                            <option value="kitchen">🍳 廚房餐具 (Kitchenware)</option>
+                            <option value="care">🌸 個人護理 (Personal Care)</option>
+                        </select>
+                    </div>
+
+                    <!-- Sort Selection (Span 3) -->
+                    <div class="lg:col-span-3">
+                        <label class="block text-xs font-semibold text-gray-400 tracking-wider mb-2 uppercase">價格排序 ‧ ORDER</label>
+                        <select id="sort-select" onchange="filterProducts()" 
+                                class="w-full bg-[#fdfbfb] border border-[#ffb3c1]/30 hover:border-[#ffb3c1] focus:border-pinkDark focus:outline-none rounded-xl py-3 px-4 text-sm text-charcoal tracking-wide transition-all shadow-inner">
+                            <option value="default">💡 推薦排序</option>
+                            <option value="low-to-high">📈 價格：由低到高</option>
+                            <option value="high-to-low">📉 價格：由高到低</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Products Grid Container -->
+            <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Dynamic cards will be rendered by JS here for supreme filter speed & flexibity -->
+            </div>
+
+            <!-- Empty State for Search -->
+            <div id="empty-state" class="hidden text-center py-16 space-y-4">
+                <div class="w-20 h-20 bg-pinkLight text-pinkDark rounded-full flex items-center justify-center mx-auto shadow-sm">
+                    <i class="fas fa-search-minus text-3xl"></i>
+                </div>
+                <div class="space-y-1">
+                    <h3 class="text-lg font-bold text-charcoal">未找到相符商品</h3>
+                    <p class="text-sm text-gray-400 max-w-sm mx-auto">嘗試修改您的關鍵字或選擇其他篩選條件，重新體驗探索良品吧！</p>
+                </div>
+                <button onclick="resetFilters()" class="bg-[#ffb3c1] hover:bg-pinkDark text-white text-xs px-5 py-2.5 rounded-full tracking-wider font-medium transition-colors">
+                    重置所有篩選
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Brand Story & Concept -->
+    <section id="about-section" class="py-20 bg-gradient-to-t from-[#fff0f3] to-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8">
+            
+            <div class="inline-block text-center mb-2">
+                <span class="text-4xl">❀</span>
+            </div>
+            
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-widest text-charcoal">
+                日常を美しく、心地よく。<br />
+                <span class="text-pinkDark font-serif text-lg sm:text-xl font-normal block mt-2">「讓每一個普通的日子，都閃爍著柔和的光芒」</span>
+            </h2>
+            
+            <div class="h-[1px] w-24 bg-[#ffb3c1]/50 mx-auto"></div>
+            
+            <p class="text-gray-500 text-sm sm:text-base leading-loose max-w-2xl mx-auto font-light">
+                「日和」在日文中象徵著風和日麗的好天氣。我們深信，器物是情感的延續。一件溫潤的手作餐具，或是一抹靜謐的空間香氛，都能在平凡的工作與生活縫隙中，為您撐起片刻的安寧。<br />
+                我們與多位日本小眾職人合作，精心挑選符合日本 Wabi-sabi (侘寂) 與極簡主義的美學生活小物。不設繁瑣的註冊會員，透過穩定的「7-11 賣貨便」提供最具保障的超取到付體驗。
+            </p>
+
+            <!-- Features Badges Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-10">
+                <div class="bg-white p-6 rounded-2xl border border-pinkLight shadow-sm">
+                    <div class="w-12 h-12 bg-pinkLight text-pinkDark rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h4 class="font-bold text-charcoal text-sm tracking-wider mb-1">日本原裝直送</h4>
+                    <p class="text-xs text-gray-400 font-light leading-relaxed">我們承諾百分之百正品，皆由專業選品團隊於日本精挑空運來台。</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-pinkLight shadow-sm">
+                    <div class="w-12 h-12 bg-pinkLight text-pinkDark rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <h4 class="font-bold text-charcoal text-sm tracking-wider mb-1">超商輕鬆取件</h4>
+                    <p class="text-xs text-gray-400 font-light leading-relaxed">直接連結 7-11 賣貨便下單結帳，享有大廠物流保障，貨到付款最便利。</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-pinkLight shadow-sm">
+                    <div class="w-12 h-12 bg-pinkLight text-pinkDark rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4 class="font-bold text-charcoal text-sm tracking-wider mb-1">精緻簡約包裝</h4>
+                    <p class="text-xs text-gray-400 font-light leading-relaxed">我們採用可回收環保紙質進行精細防撞包裝，讓開箱亦是美好的儀式。</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Minimalist Japanese Footer -->
+    <footer class="bg-white border-t border-pinkLight py-12 text-center text-xs text-gray-400 space-y-4">
+        <div class="flex items-center justify-center space-x-2">
+            <span class="font-bold text-charcoal tracking-widest">日和日常 ❀ Hiyori Selection</span>
+            <span>|</span>
+            <span>日常にささやかな幸せを</span>
+        </div>
+        <p class="max-w-md mx-auto leading-relaxed font-light">
+            免責聲明：本網站為極簡生活風格展示，部分圖片與文字素材源自網路。若有任何版權或合作問題，歡迎隨時聯絡我們。
+        </p>
+        <div class="flex justify-center space-x-6 pt-2">
+            <a href="#" class="hover:text-pinkDark transition-colors">利用條款</a>
+            <a href="#" class="hover:text-pinkDark transition-colors">隱私權政策</a>
+            <a href="https://myship.7-11.com.tw/" target="_blank" class="hover:text-pinkDark transition-colors">7-11賣貨便查詢</a>
+        </div>
+        <div class="pt-6 border-t border-gray-100 text-[10px] tracking-widest text-gray-300">
+            &copy; 2026 HIYORI SELECTION CO., LTD. ALL RIGHTS RESERVED.
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. 商品數據庫 (JSON Schema) ---
+        // 包含類別 (decor/kitchen/care)、產品圖片、價格、購買連結
+        const productsData = [
+            {
+                id: 1,
+                name: "櫻花香氛手工植物大豆蠟燭",
+                category: "decor",
+                price: 480,
+                originalPrice: 650,
+                image: "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&q=80&w=800",
+                badge: "新着",
+                badgeColor: "bg-pinkDark",
+                description: "奈良八重櫻特調，融化生活疲憊。",
+                checkoutUrl: "https://myship.7-11.com.tw/general/detail/V2405000000001"
+            },
+            {
+                id: 2,
+                name: "極簡霧粉陶瓷手沖咖啡濾壺組",
+                category: "kitchen",
+                price: 880,
+                originalPrice: 1200,
+                image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800",
+                badge: "予約",
+                badgeColor: "bg-[#ffb3c1]",
+                description: "波佐見燒傳統工藝，限定霧粉櫻色。",
+                checkoutUrl: "https://myship.7-11.com.tw/general/detail/V2405000000002"
+            },
+            {
+                id: 3,
+                name: "和風手作刺繡純棉抱枕套",
+                category: "decor",
+                price: 550,
+                originalPrice: 690,
+                image: "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=800",
+                badge: "預告",
+                badgeColor: "bg-charcoal",
+                description: "京都手作花卉刺繡，極佳棉麻質感。",
+                checkoutUrl: "#",
+                isSoon: true // 即將上市，不跳轉
+            },
+            {
+                id: 4,
+                name: "櫻色雙層耐熱防燙玻璃杯 (320ml)",
+                category: "kitchen",
+                price: 320,
+                originalPrice: 450,
+                image: "https://images.unsplash.com/photo-1577937927133-66ef06acdf18?auto=format&fit=crop&q=80&w=800",
+                badge: "HOT",
+                badgeColor: "bg-pinkDark",
+                description: "雙層耐溫設計，冷熱飲皆完美呈現。",
+                checkoutUrl: "https://myship.7-11.com.tw/"
+            },
+            {
+                id: 5,
+                name: "日式珪藻土急速吸水杯墊 (兩入組)",
+                category: "decor",
+                price: 150,
+                originalPrice: 220,
+                image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=800",
+                badge: "SALE",
+                badgeColor: "bg-pinkAccent",
+                description: "瞬間乾爽，精緻壓花浮雕工藝。",
+                checkoutUrl: "https://myship.7-11.com.tw/"
+            },
+            {
+                id: 6,
+                name: "植物萃取櫻花滋養保濕護手霜",
+                category: "care",
+                price: 250,
+                originalPrice: 350,
+                image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=800",
+                badge: "新着",
+                badgeColor: "bg-pinkDark",
+                description: "乳木果油基底，清爽吸收不黏膩。",
+                checkoutUrl: "https://myship.7-11.com.tw/"
+            },
+            {
+                id: 7,
+                name: "日式手作粗陶復古櫻花小碟",
+                category: "kitchen",
+                price: 180,
+                originalPrice: 260,
+                image: "https://images.unsplash.com/photo-1535401991746-da3d9055713e?auto=format&fit=crop&q=80&w=800",
+                badge: "人氣",
+                badgeColor: "bg-[#ffb3c1]",
+                description: "手作粗陶肌理，日常配菜點綴美感。",
+                checkoutUrl: "https://myship.7-11.com.tw/"
+            },
+            {
+                id: 8,
+                name: "有機棉柔親膚極柔毛巾組",
+                category: "care",
+                price: 450,
+                originalPrice: 600,
+                image: "https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&q=80&w=800",
+                badge: "優選",
+                badgeColor: "bg-pinkAccent",
+                description: "無化學無漂白，敏感肌的最佳選擇。",
+                checkoutUrl: "https://myship.7-11.com.tw/"
+            },
+            {
+                id: 9,
+                name: "日式藤編多功能圓形收納籃",
+                category: "decor",
+                price: 390,
+                originalPrice: 520,
+                image: "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=800",
+                badge: "推薦",
+                badgeColor: "bg-pinkDark",
+                description: "天然秋藤手工編織，質感收納桌面。",
+                checkoutUrl: "https://myship.7-11.com.tw/"
+            },
+            {
+                id: 10,
+                name: "天然蠶絲遮光親膚眼罩",
+                category: "care",
+                price: 420,
+                originalPrice: 580,
+                image: "https://images.unsplash.com/photo-1583316174775-bd6dc0e9f298?auto=format&fit=crop&q=80&w=800",
+                badge: "予約",
+                badgeColor: "bg-[#ffb3c1]",
+                description: "100% 桑蠶絲雙面材質，奢華睡眠感。",
+                checkoutUrl: "https://myship.7-11.com.tw/"
+            },
+            {
+                id: 11,
+                name: "極輕量晴雨防紫外線碳纖傘",
+                category: "care",
+                price: 590,
+                originalPrice: 800,
+                image: "https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?auto=format&fit=crop&q=80&w=800",
+                badge: "經典",
+                badgeColor: "bg-charcoal",
+                description: "僅重 99g，防曬黑膠塗層完美阻絕。",
+                checkoutUrl: "https://myship.7-11.com.tw/"
+            },
+            {
+                id: 12,
+                name: "日式天然櫻花木製手工餐具組",
+                category: "kitchen",
+                price: 280,
+                originalPrice: 380,
+                image: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&q=80&w=800",
+                badge: "熱銷",
+                badgeColor: "bg-pinkDark",
+                description: "手雕實木手柄，體驗日式食事精緻感。",
+                checkoutUrl: "https://myship.7-11.com.tw/"
+            }
+        ];
+
+        // --- 2. 頁面載入時初始化 ---
+        window.onload = function() {
+            renderProducts(productsData);
+            
+            // 行動端導覽列切換
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // 錨點平滑滾動調整
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                        // 關閉行動端選單
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        };
+
+        // --- 3. 渲染商品清單 ---
+        function renderProducts(items) {
+            const grid = document.getElementById('products-grid');
+            const emptyState = document.getElementById('empty-state');
+            const countDisplay = document.getElementById('filtered-count');
+            
+            // 清空舊 HTML
+            grid.innerHTML = '';
+            
+            if (items.length === 0) {
+                grid.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                countDisplay.textContent = '0';
+                return;
+            }
+
+            grid.classList.remove('hidden');
+            emptyState.classList.add('hidden');
+            countDisplay.textContent = items.length;
+
+            items.forEach(product => {
+                const isSoonBtn = product.isSoon;
+                const buttonHtml = isSoonBtn 
+                    ? `<button disabled class="bg-gray-200 text-gray-400 font-medium text-xs px-4 py-2.5 rounded-xl cursor-not-allowed">即將上市</button>`
+                    : `<a href="${product.checkoutUrl}" target="_blank" class="bg-[#ffb3c1] hover:bg-pinkDark text-white font-medium text-xs px-4 py-2.5 rounded-xl tracking-wider transition-all duration-300 shadow-sm hover:shadow-md flex items-center space-x-1">
+                        <span>前往購買</span>
+                        <i class="fas fa-chevron-right text-[8px] ml-1"></i>
+                       </a>`;
+
+                const originalPriceHtml = product.originalPrice 
+                    ? `<span class="text-[10px] text-gray-300 line-through">NT$ ${product.originalPrice}</span>` 
+                    : '';
+
+                const cardHtml = `
+                    <div class="bg-white rounded-2xl border border-pinkLight/70 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden flex flex-col justify-between group">
+                        <div>
+                            <!-- Image wrapper -->
+                            <div class="relative overflow-hidden aspect-square bg-[#fff0f3]">
+                                <span class="absolute top-3 left-3 z-10 ${product.badgeColor} text-white text-[9px] tracking-widest font-bold px-2.5 py-0.5 rounded-full uppercase">
+                                    ${product.badge}
+                                </span>
+                                <img src="${product.image}" 
+                                     alt="${product.name}" 
+                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                     onerror="this.src='https://placehold.co/400x400/ffe5ec/fb6f92?text=${encodeURIComponent(product.name)}'">
+                            </div>
+                            <!-- Meta Content -->
+                            <div class="p-4 space-y-1.5">
+                                <span class="text-[9px] text-pinkDark tracking-widest block font-medium"># ${getCategoryChinese(product.category)}</span>
+                                <h3 class="text-sm font-semibold text-charcoal tracking-wide line-clamp-1 group-hover:text-pinkDark transition-colors">${product.name}</h3>
+                                <p class="text-xs text-gray-400 font-light line-clamp-2">${product.description}</p>
+                            </div>
+                        </div>
+                        <!-- Footer / Pricing & Button -->
+                        <div class="px-4 pb-4 pt-2 flex items-center justify-between border-t border-pinkLight/50">
+                            <div class="flex flex-col">
+                                ${originalPriceHtml}
+                                <span class="text-sm font-bold text-pinkDark font-serif">NT$ ${product.price}</span>
+                            </div>
+                            ${buttonHtml}
+                        </div>
+                    </div>
+                `;
+                grid.insertAdjacentHTML('beforeend', cardHtml);
+            });
+        }
+
+        // --- 4. 動態搜尋、類別篩選與排序整合器 ---
+        function filterProducts() {
+            const searchValue = document.getElementById('search-input').value.trim().toLowerCase();
+            const categoryValue = document.getElementById('category-select').value;
+            const sortValue = document.getElementById('sort-select').value;
+
+            // Step 1: Filter by category & search term
+            let filtered = productsData.filter(product => {
+                const matchesCategory = (categoryValue === 'all' || product.category === categoryValue);
+                const matchesSearch = (product.name.toLowerCase().includes(searchValue) || 
+                                       product.description.toLowerCase().includes(searchValue));
+                return matchesCategory && matchesSearch;
+            });
+
+            // Step 2: Apply sorting
+            if (sortValue === 'low-to-high') {
+                filtered.sort((a, b) => a.price - b.price);
+            } else if (sortValue === 'high-to-low') {
+                filtered.sort((a, b) => b.price - a.price);
+            }
+
+            // Step 3: Render results
+            renderProducts(filtered);
+        }
+
+        // --- 5. 輔助轉換器 ---
+        function getCategoryChinese(cat) {
+            switch(cat) {
+                case 'decor': return '家居裝飾';
+                case 'kitchen': return '廚房餐具';
+                case 'care': return '個人護理';
+                default: return '生活美學';
+            }
+        }
+
+        // --- 6. 重置篩選器 ---
+        function resetFilters() {
+            document.getElementById('search-input').value = '';
+            document.getElementById('category-select').value = 'all';
+            document.getElementById('sort-select').value = 'default';
+            renderProducts(productsData);
+        }
+
+        // --- 7. 特選區（新推出/預購/即將上市）Tab 切換器 ---
+        function filterFeatured(type) {
+            const buttons = document.querySelectorAll('.feat-tab-btn');
+            const cards = document.querySelectorAll('.featured-card');
+
+            // 1. 更新按鈕高亮狀態
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-pinkLight', 'text-pinkDark', 'border-pinkAccent/20');
+                btn.classList.add('bg-white', 'text-gray-400', 'border-gray-100');
+            });
+
+            const activeBtn = document.getElementById(`feat-btn-${type}`);
+            activeBtn.classList.remove('bg-white', 'text-gray-400', 'border-gray-100');
+            activeBtn.classList.add('active', 'bg-pinkLight', 'text-pinkDark', 'border-pinkAccent/20');
+
+            // 2. 動態顯隱對應類型的卡片 (Fade Transition)
+            cards.forEach(card => {
+                const cardType = card.getAttribute('data-feat-type');
+                if (type === 'all' || cardType === type) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(10px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
